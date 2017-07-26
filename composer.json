@@ -1,0 +1,29 @@
+{
+"repositories": [
+    {
+        "type": "package",
+        "package": {
+            "name": "homelan/retro-acorn-bbc-mode7",
+            "version": "dev-master",
+            "source": {
+                "url": "git://github.com/homelan/retro-acorn-bbc-mode7.git",
+                "type": "git",
+                "reference": "master"
+            },
+            "autoload": {
+		"psr-4": { "HomeLan\\Retro\\BBC\\Gfx\\": "HomeLan/Retro/BBC/Gfx" }
+            }
+        }
+    }
+],
+            "autoload": {
+		"psr-4": {
+			"HomeLan\\Retro\\BBC\\Gfx\\": "HomeLan/Retro/BBC/Gfx" ,
+			"HomeLan\\Core\\Filesystem\\": "HomeLan/Core/Filesystem/" 
+		}
+            },
+
+    "require": {
+        "symfony/filesystem": "^3.2"
+    }
+}
