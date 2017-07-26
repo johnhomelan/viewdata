@@ -3,10 +3,10 @@
     {
         "type": "package",
         "package": {
-            "name": "homelan/retro-acorn-bbc-mode7",
+            "name": "homelan/viewdata",
             "version": "dev-master",
             "source": {
-                "url": "git://github.com/homelan/retro-acorn-bbc-mode7.git",
+                "url": "git://github.com/homelan/viewdata",
                 "type": "git",
                 "reference": "master"
             },
