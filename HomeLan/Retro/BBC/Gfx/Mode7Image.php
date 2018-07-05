@@ -2,7 +2,7 @@
 
 namespace HomeLan\Retro\BBC\Gfx;
 
-use \Exception;
+use Exception;
 
 class Mode7Image { 
 
