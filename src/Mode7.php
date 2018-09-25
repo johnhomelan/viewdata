@@ -1,10 +1,10 @@
 <?php
 
-namespace HomeLan\Retro\BBC\Gfx;
+namespace HomeLan\Retro\Acorn\BBC\Gfx;
 
 use Exception;
 
-class Mode7Image { 
+class Mode7 { 
 
 	private $oFS;
 	private $sBinaryMode7Data;
@@ -236,12 +236,11 @@ class Mode7Image {
 	 *
 	 * @param string $sFileName
 	*/
-	public function loadMode7Data($sFileName)
+	public function loadMode7Data(string $sFileName):void
 	{
 		if(!is_null($this->hImage)){
 			imagedestroy($this->hImage);
 			$this->hImage = null;
-			echo "reset\n";
 		}
 		$this->sBinaryMode7Data = $this->oFS->getContents($sFileName);
 	}
@@ -251,7 +250,7 @@ class Mode7Image {
 	 *
 	 * @param string $sFile The filename to write the jpeg to
 	*/
-	public function writeJpeg($sFile)
+	public function writeJpeg(string $sFile):void
 	{
 		$this->_buildImage();
 		imagejpeg($this->hImage,$sFile);
@@ -262,7 +261,7 @@ class Mode7Image {
 	 *
 	 * @param string $sFile The filename to write the png to
 	*/
-	public function writePng($sFile)
+	public function writePng(string $sFile): void
 	{
 		$this->_buildImage();
 		imagepng($this->hImage,$sFile);
@@ -273,7 +272,7 @@ class Mode7Image {
 	 *
 	 * @param string $sFile The filename to write the gif to
 	*/
-	public function writeGif($sFile)
+	public function writeGif(string $sFile):void
 	{
 		$this->_buildImage();
 		imagegif($this->hImage,$sFile);
@@ -284,7 +283,7 @@ class Mode7Image {
 	 *
 	 * @param string $sFile The filename to write the bmp to
 	*/
-	public function writeBmp($sFile)
+	public function writeBmp(string $sFile):void
 	{
 		$this->_buildImage();
 		imagebmp($this->hImage,$sFile);

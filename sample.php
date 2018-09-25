@@ -1,11 +1,11 @@
 <?php
 require_once 'vendor/autoload.php';
 
-use HomeLan\Retro\BBC\Gfx\Mode7Image;
+use HomeLan\Retro\Acorn\BBC\Gfx\Mode7;
 use HomeLan\Core\Filesystem\Filesystem;
 
 
-$oTeleText = new Mode7Image(
+$oTeleText = new Mode7(
 			new Filesystem()
 		);
 

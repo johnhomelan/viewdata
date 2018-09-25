@@ -1,29 +1,25 @@
 {
-"repositories": [
-    {
-        "type": "package",
-        "package": {
-            "name": "homelan/viewdata",
-            "version": "dev-master",
-            "source": {
-                "url": "git://github.com/homelan/viewdata",
-                "type": "git",
-                "reference": "master"
-            },
-            "autoload": {
-		"psr-4": { "HomeLan\\Retro\\BBC\\Gfx\\": "HomeLan/Retro/BBC/Gfx" }
-            }
+    "name": "homelan/acorn-mode7",
+    "description": "Provides a class for build png/jpeg/gif images of raw mode 7 graphics data from the BBC Mirco (teletext, and viewdata)",
+    "keywords": ["acorn", "mode7", "teletext", "viewdata" ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "John Brown",
+            "email": "packaging@home-lan.co.uk"
         }
-    }
-],
-            "autoload": {
-		"psr-4": {
-			"HomeLan\\Retro\\BBC\\Gfx\\": "HomeLan/Retro/BBC/Gfx" ,
-			"HomeLan\\Core\\Filesystem\\": "HomeLan/Core/Filesystem/" 
-		}
-            },
-
+    ],
+    "type": "project",
     "require": {
-        "symfony/filesystem": "^3.2"
+		"php": ">=7.1",
+        	"homelan/core-filesystem": "^0.1"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "HomeLan\\Retro\\Acorn\\BBC\\Gfx\\": "src/"
+        }
     }
 }
